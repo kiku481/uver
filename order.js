@@ -39,4 +39,3 @@ document.addEventListener('DOMContentLoaded', updateItemQuantity);
         minute: '2-digit' 
     };
     currentDateElement.textContent = `(${now.toLocaleDateString('ko-KR', options)})`;
-});
