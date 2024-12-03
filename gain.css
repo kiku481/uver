@@ -1,0 +1,236 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Bar */
+#layout {
+    background-color: rgb(3, 191, 6);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#circles {
+    display: flex;
+    flex-direction: row;
+}
+
+#circle1 {
+    background-color: red;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 25px;
+}
+#circle2 {
+    background-color: yellow;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+#circle3 {
+    background-color: green;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+#white {
+    background-color: white;
+    border-radius: 30px;
+    width: 45%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(88, 88, 88);
+}
+
+#share_icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+}
+
+
+/* Main Content */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 콘텐츠를 세로로 시작점(상단)으로 정렬 */
+    align-items: flex-end; /* 콘텐츠를 가로로 오른쪽 끝에 정렬 */
+    padding: 20px;
+    margin-right: 10%;
+    background-color: white;
+}
+
+/* Full Height Adjustment */
+.full-height {
+    height: calc(100vh - 50px); /* Adjust to exclude header height */
+}
+
+#UE {
+    font-size: 22px;
+    color: #ddd;
+}
+
+
+.signup-title {
+    font-size: 45px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+    width: 100%;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;  /* 텍스트를 세로로 배치 */
+    justify-content: center;  /* 세로 방향으로 가운데 정렬 */
+    margin-top: 30%;
+    padding-right: 40px;
+}
+/* Test */
+.test {
+    display: flex;
+    width :1000px;
+    margin-top: 100px;
+}
+
+.test_box1{
+    min-width : 250px;
+}
+
+/* Form Styling */
+.signup-form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    align-items: center; /* 레이블과 입력 필드를 수평으로 정렬 */
+    gap: 20px;  /* 레이블과 입력 필드 사이의 간격 */
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 20px;
+    color: #32cd32;
+    margin-right: 60px; /* 레이블과 입력 필드 사이의 간격 */
+    width: 180px; /* 레이블의 고정 너비 */
+    font: bold;
+    gap: 20px;
+    font-weight: 600; /* 굵은 글씨 */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+
+/* Language Flags */
+.language-group .flags {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.language-group .flags img {
+    width: 120px;
+    height: 75px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.language-group .flags img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Submit Button */
+.submit-button {
+    background-color: rgb(3, 191, 6);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;  /* 버튼 너비 제한 */
+    height: 40px;
+    margin-top: 35px;  /* 버튼과 다른 요소들 간의 간격 */
+    display: flex;  /* 텍스트 중앙 정렬을 위한 flexbox 사용 */
+    justify-content: center;  /* 가로 중앙 정렬 */
+    align-items: center;  /* 세로 중앙 정렬 */
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center;  /* 가로로 가운데 정렬 */
+    align-items: center;  /* 세로로 가운데 정렬 */
+    margin-left: 10px;  /* 인풋 필드와 동그라미 사이의 간격 */
+}
+
+/* 공통 동그라미 스타일 */
+.circle {
+    width: 12px;  /* 동그라미 크기 */
+    height: 12px;  /* 동그라미 크기 */
+    border-radius: 50%;  /* 원형으로 만들기 */
+}
+
+/* 각 동그라미 색상 */
+.circle-red {
+    background-color: red;
+}
+
+.circle-yellow {
+    background-color: yellow;
+}
+
+.circle-green {
+    background-color: green;
+}
+
+.circle-blue {
+    background-color: blue;
+    margin-left: 50px;
+}
+

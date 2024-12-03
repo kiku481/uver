@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#layout {
+    background-color: rgb(3, 191, 6);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%; /* 화면의 오른쪽 절반을 차지 */
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; /* 절대 위치로 고정 */
+    top: 0; /* 화면 상단에 위치 */
+    right: 0; /* 화면 오른쪽에 위치 */
+    padding: 0 20px; /* 왼쪽, 오른쪽에 여백 추가 */
+}
+
+#circles {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* 원들 사이 간격을 추가 */
+}
+
+#circle1, #circle2, #circle3 {
+    background-color: red;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+#circle2 {
+    background-color: yellow;
+}
+
+#circle3 {
+    background-color: green;
+}
+
+#white {
+    background-color: white;
+    border-radius: 30px;
+    width: 45%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(88, 88, 88);
+}
+
+#share_icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 25px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    width: 100vw;
+}
+
+.container {
+    position: relative; /* 상대 위치로 설정 */
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.burger-image {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;               /* Flexbox로 중앙 정렬 */
+    justify-content: center;     /* 수평 중앙 정렬 */
+    align-items: center;         /* 수직 중앙 정렬 */
+    padding: 10px;
+}
+
+.burger-image img {
+    width: 100%;                  /* 이미지 너비는 90%로 설정 */
+    height: 100%;
+    border: 9px solid #ccc;      /* 회색 테두리 추가 */
+    border-radius: 10px;         /* 테두리의 모서리 둥글게 처리 */
+    padding: 10px;               /* 테두리와 이미지 간 간격을 추가 */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 리뷰 섹션 스타일 */
+.review {
+    padding: 30px;  /* 패딩을 줄여서 더 깔끔하게 */
+    background-color: #ffffff;
+    margin-top: 40px;  /* 위쪽 여백 */
+    max-width: 800px; /* 최대 너비 800px */
+    margin-left: auto; /* 화면 중앙에 위치 */
+    margin-right: auto;
+}
+
+.review-header {
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */ 
+    position: relative; /* 부모 요소 내에서 절대 위치 지정 */
+    top: 60px; /* 화면 상단에 배치 */
+    right: 110px; /* 화면 왼쪽에 배치 */
+}
+
+.user-info {
+    display: flex;  /* 플렉스박스로 가로로 배치 */
+    align-items: center;  /* 세로로 중앙 정렬 */
+    gap: 20px;  /* 사진과 이름 사이의 간격 */
+}
+
+/* 프로필 사진 스타일 */
+.profile-pic {
+    width: 90px;  /* 사진 크기 */
+    height: 90px;  /* 사진 크기 */
+    border-radius: 50%;  /* 원형으로 만듦 */
+    object-fit: cover;  /* 이미지 비율 맞춰서 잘리게 함 */
+}
+
+/* 유저 이름과 통계를 포함하는 div */
+.user-info > div {
+    display: flex;
+    flex-direction: column;  /* 세로로 배치 */
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 45px;  /* 유저 네임 크기를 크게 설정 */
+    color: #333;
+    margin: 0;  /* 패딩과 마진을 리셋해서 상하 여백이 생기지 않도록 */
+}
+
+
+/* 사용자 통계(리뷰 개수와 평균별점) 스타일 */
+.user-stats {
+    font-size: 22px;
+    color: #9f9f9f;
+    font-weight: bold;
+}
+
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    position: relative; /* 텍스트를 기준으로 절대 위치 */
+    padding-top: 60px; /* 이모지들이 텍스트 위에 오도록 위 여백 조정 */
+    top: 75px;
+    left: -88px;
+    font-weight: bold;
+}
+
+/* 이모지들을 한 줄로 배치하기 */
+.emoji-container {
+    display: flex;       /* 가로로 배치 */
+    position: relative;
+    top: 120px;
+    left: -90px;
+}
+
+/* 별 이모지 스타일 */
+.star-emoji {
+    font-size: 40px;  /* 별 이모지 크기 */
+    margin-right: 10px; /* 이모지들 간의 간격 */
+}
+
+/* 카메라 이모지 스타일 */
+.camera-emoji {
+    font-size: 40px;  /* 카메라 이모지 크기 */
+}
+
+ul {
+    list-style-type: disc;
+    left: -66px;
+    margin-top: 150px;
+    position: relative;
+    
+}
+
+.review-label {
+    position: relative; /* 상대적인 위치 조정 */
+    left: -90px; /* '리뷰:'만 왼쪽으로 20px 이동 */
+    font-size: 25px; /* 글자 크기 */
+    color: #9f9f9f; /* 글자 색상 */
+    top: 120px;
+    font-weight: bold;
+}
+
+/* ul 리스트 항목에 대해서는 위치를 유지하도록 설정 */
+
+
+ul li {
+    font-size: 20px;
+    color: #9f9f9f;
+    margin-bottom: 5px;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;  /* 양쪽 끝에 아이템 배치 */
+    width: 100%;  /* 부모의 너비를 100%로 설정 */
+    position: relative;
+    top: 40px;  /* 필요한 위치로 설정 */
+}
+
+
+.review-footer a:hover {
+    color: #0056b3;
+    text-decoration: underline;  /* 마우스 커서 올리면 밑줄 생기게 설정 */
+}
+
+.review-footer a.delete:hover {
+    color: #CC0000;
+    text-decoration: underline;
+}
+
+.review-footer .view-link {
+    /* 원문보기에 원하는 위치 지정 */
+    position: relative;
+    left: -80px; /* 예시로 50px만큼 왼쪽으로 위치 이동 */
+    color: #007BFF;
+}
+
+/* 삭제 링크 스타일 */
+.review-footer .delete {
+    position: relative;
+    right: -80px; /* 예시로 50px만큼 오른쪽으로 위치 이동 */
+    color: #FF4D4D;
+}

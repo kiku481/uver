@@ -1,0 +1,233 @@
+/* 전체 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  border-radius: 20px;
+}
+
+/* 브라우저 상단 막대 */
+#layout {
+  background-color: rgb(3, 191, 6);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#circles {
+  display: flex;
+  flex-direction: row;
+}
+
+#circle1 {
+  background-color: red;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-left: 25px;
+}
+#circle2 {
+  background-color: yellow;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+#circle3 {
+  background-color: green;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+
+#white {
+  background-color: white;
+  border-radius: 30px;
+  width: 45%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(88, 88, 88);
+}
+
+#share_icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 25px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.order-info {
+  background-color: #444;
+  color: white;
+  padding: 20px;
+  padding-bottom: 80px;
+  border-radius: 10px;
+}
+
+.order-info h2 {
+  margin-left: 70px;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.order-info h1 {
+  font-family: 'Impact', sans-serif;
+  font-style: italic; 
+  margin: 5px 70px;
+  font-size: 80px;
+}
+
+/* 메뉴 스타일 */
+.menu {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: flex-start;  /* 왼쪽 정렬 */
+  gap: 20px;              /* 각 항목 간 간격 */
+  padding: 40px 70px;
+}
+
+
+/* 사이드 메뉴 스타일 */
+.side-menu {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: flex-end;  /* 오른쪽 정렬 */
+  gap: 20px;              /* 각 항목 간 간격 */
+  margin-top: -400px;     /* 오른쪽 여백 */
+}
+
+/* 사이드 메뉴 항목 스타일 */
+.side-menu-item {
+  display: flex;
+  flex-direction: row; /* 이미지와 텍스트는 가로로 정렬 */
+  align-items: center; /* 세로 가운데 정렬 */
+  position: relative;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+/* 이미지 스타일 */
+.item-image {
+  width: 190px;
+  height: 190px;
+  object-fit: cover; /* 비율을 유지하며 이미지 맞춤 */
+  display: block; /* 기본 블록 요소로 설정 */
+  margin: 0; /* 필요에 따라 조정 */
+}
+
+/* 상세 정보 영역 */
+.item-details {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px;
+  width: 280px;
+  height: 190px; /* 이미지와 같은 세로 길이 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+/* 이름 텍스트 */
+.item-name {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* 가격 텍스트 */
+.item-price {
+  font-size: 16px;
+  text-align: right;
+  margin: 0;
+}
+
+/* 추가 직사각형 */
+.item-extra {
+  background-color: #1a1a1a;
+  width: 20px;
+  height: 190px; /* 이미지와 같은 세로 길이 */
+}
+
+/* 수량 표시 (초록색 원) */
+.item-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative; /* 절대 위치의 기준이 됩니다. */
+  margin-right: 100px;
+}
+
+/* item-number를 절대 위치로 설정하여 사진과 직사각형 위에 겹치게 합니다. */
+.item-number {
+  display: none;  /* 기본적으로 원은 숨김 */
+  position: absolute;
+  bottom: -10px; /* 세로 중앙에 위치 */
+  left: 180px; /* 왼쪽으로 이동하여 상세 정보 박스와 겹치게 조정 */
+  background-color: #4caf50;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  z-index: 10; /* 다른 요소들보다 위에 표시되도록 */
+}
+
+/* 버튼 스타일 */
+.buttons {
+  display: flex;
+  justify-content: space-between; /* 버튼 사이의 간격을 균등하게 설정 */
+  margin-top: 20px;
+  position: absolute; /* 화면의 오른쪽 아래에 고정 */
+  bottom: 60px; /* 아래에서 20px 떨어지게 */
+  right: 50px; /* 오른쪽에서 20px 떨어지게 */
+  z-index: 10; /* 다른 요소 위에 표시되도록 */
+  gap: 20px; /* 버튼 사이의 간격을 20px로 설정 */
+}
+
+button {
+  padding: 20px 60px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #818181;
+  transition: 0.3s;
+}
+
+button:nth-child(1) {
+  background-color: #d7d7d7;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+button:nth-child(2) {
+  background-color: #d7d7d7;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
